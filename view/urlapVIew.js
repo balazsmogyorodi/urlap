@@ -15,6 +15,7 @@ class UrlapView {
         this.#urlapOsszerak()
         this.submitElem = $("#submit");
         this.submitElem.on("click", (event) => {
+            event.preventDeafault();
             this.#submitTrigger();
         })
 
@@ -43,7 +44,7 @@ class UrlapView {
   
 
     #submitTrigger() {
-        window.dispatchEvent(CustomEvent("kuldes", {detail:this.#urlapEllemlista}));
+        window.dispatchEvent(new CustomEvent("kuldes", {detail: this.#urlapEllemlista}));
     }
 
 

@@ -6,7 +6,7 @@ class UrlapController {
         const urlapModel = new UrlapModel();
         new UrlapView($(".urlap"), urlapModel.Leiro);
         $(window).on("kuldes", (event) => {
-            event.preventDeafault();
+          
             event.detail.forEach(elem => {
                 console.log(elem);
                 console.log(elem.valid);
